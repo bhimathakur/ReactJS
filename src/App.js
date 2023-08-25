@@ -1,24 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
-
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import Watch from './components/Watch';
+import Layout from './components/Layout';
+import MainContainer from './components/MainContainer';
+import SearchResult from './components/SearchResult';
+import { ErrorBoundary } from 'react-error-boundary';
+import ErrorHandler from './components/ErrorHandler';
 function App() {
+
+  const appRouter = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout />,
+      errorElement: <ErrorHandler />,
+      children: [
+        {
+          path: '/',
+          element: <MainContainer />,
+        },
+        {
+          path: 'watch',
+          element: <Watch />,
+        },
+        {
+          path: 'search-result',
+          element: <SearchResult />
+        }
+      ]
+
+    }
+  ])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <RouterProvider router={appRouter} >
+      <Layout />
+      </RouterProvider>
   );
 }
 

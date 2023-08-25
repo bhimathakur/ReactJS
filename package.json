@@ -1,27 +1,41 @@
 {
-  "name": "myyoutube",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "This is namste react app",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "jest"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "author": "Bhima Thakur",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.22.1",
+    "@babel/preset-env": "^7.22.4",
+    "@babel/preset-react": "^7.22.3",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "babel-jest": "^29.5.0",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "formik": "^2.2.9",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "parcel": "^2.8.3",
+    "postcss": "^8.4.21",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.2.7"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-error-boundary": "^4.0.10",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.8.1",
+    "react-scripts": "^5.0.1",
+    "react-youtube": "^10.1.0",
+    "web-vitals": "^3.3.2",
+    "yup": "^1.0.2"
   },
   "browserslist": {
     "production": [
